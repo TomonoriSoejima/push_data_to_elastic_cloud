@@ -7,6 +7,10 @@ short_deploymnent_id=$(echo $1|  cut -b -6)
 
 # credentials=$(find . -maxdepth 1 | grep --color=never $short_deploymnent_id)
 credentials=$(find . -maxdepth 1 | grep --color=never $short_deploymnent_id | xargs grep -v username | sed -e s/\,/\:/ -e s/,true//)
-
 export credentials=$credentials
-# echo $credentials
+
+endpoint=$(ecctl deployment show $1 | jq -r '.resources.elasticsearch[0].info.metadata | (.endpoint + ":" +  (.ports.https|tostring))')
+echo $endpoint
+
+export endpoint=https://$endpoint
+
