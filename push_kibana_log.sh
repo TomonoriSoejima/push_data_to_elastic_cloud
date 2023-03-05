@@ -1,5 +1,5 @@
 . get_cred_endpoint.sh $1
-url="https://$endpoint"
+
 split -l 1000 kibana.json segment
 
 for i in $(ls -1 | grep segment); do
