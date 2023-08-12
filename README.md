@@ -29,7 +29,6 @@ This script fetches the short deployment ID from a given input, extracts the ass
 ./get_cred_endpoint.sh [DEPLOYMENT_ID]
 
   
-
 ```
 
   
@@ -71,7 +70,6 @@ This script uses the `get_cred_endpoint.sh` to get credentials and endpoint, and
 ./push_custom_data.sh [DEPLOYMENT_ID]
 
   
-
 ```
 
   
