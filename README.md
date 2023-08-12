@@ -54,7 +54,7 @@ Where:
 
   
 
-### `transfer_data.sh` (Assuming this name for script 2)
+### `push_custom_data.sh`
 
   
 
@@ -68,7 +68,7 @@ This script uses the `get_cred_endpoint.sh` to get credentials and endpoint, and
 
 ```
 
-./transfer_data.sh [DEPLOYMENT_ID]
+./push_custom_data.sh [DEPLOYMENT_ID]
 
   
 
